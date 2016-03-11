@@ -142,6 +142,12 @@ begin
     end;
 end;
 
+function TUSBController.GetUSBDeviceClass(VendorID, DeviceID: word
+  ): TUSBDeviceClass;
+begin
+
+end;
+
 constructor TUSBController.Create(AOwner: TComponent);
 begin
   inherited Create(AOwner);
@@ -162,7 +168,7 @@ end;
 
 { TUSBDevice }
 
-function TUSBDevice.OpenDevice(DevicePath: string): Boolean;
+function TUSBDevice.OpenDevice: Boolean;
 begin
 
 end;

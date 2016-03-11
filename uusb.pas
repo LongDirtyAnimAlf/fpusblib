@@ -128,8 +128,6 @@ type
     FOnUSBRemove: TNotifyEvent;
     FDeviceList : TList;
     FBusList : TList;
-    function GetHostController(idx : Integer): TUsbHostController;
-    function GetCount: Integer;
   {$IFDEF WINNATIVE}
     FWindowHandle: HWND;
     procedure WndProc(var Msg: TMessage);
@@ -137,6 +135,8 @@ type
   {$ELSE}
     Async : TUSBControllerAsync;
   {$ENDIF}
+    function GetHostController(idx : Integer): TUsbHostController;
+    function GetCount: Integer;
     function GetUSBDeviceClass(VendorID,DeviceID : word) : TUSBDeviceClass;
   protected
   {$IFDEF WINNATIVE}
